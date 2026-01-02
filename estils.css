@@ -40,7 +40,7 @@ body {
     margin-right: 8px;
 }
 
-/* Barra de Navegació */
+/* Menu */
 .topnav {
     position: sticky;
     top: 10px;
@@ -113,6 +113,48 @@ body {
     display: block;
 }
 
+/* Footer */
+footer {
+    background-color: var(--color-primari);
+    color: var(--blanc-os);
+    padding: 30px 20px;
+    margin-top: auto;
+    border-top: 2px solid var(--color-secundari);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-contingut {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: var(--color-secundari);
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--color-secundari-clar);
+}
+
+.copyright {
+    font-size: 14px;
+    font-family: "Open Sans", serif;
+    opacity: 0.8;
+    margin: 0;
+    text-align: right;
+}
+
 
 
 /* ESTILS PER INDEX.HTML */
@@ -130,7 +172,7 @@ body {
 /* ESTILS PER MÒBILS */
 @media (max-width: 768px) {
     /* ESTILS GENERALS */
-    /* Barra de Navegació */
+    /* Menu */
     .topnav {
         height: 70px;
         padding: 0 20px;
@@ -176,6 +218,25 @@ body {
 
     #menu-toggle:checked + .topnav .menu {
         max-height: 400px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 25px;
+    }
+
+    .footer-contingut {
+        gap: 20px;
+    }
+
+    .social-icon span {
+        font-size: 25px;
+    }
+
+    .copyright {
+        font-size: 12px;
+        max-width: 250px;
+        line-height: 1.4;
     }
 
 
