@@ -139,7 +139,7 @@ footer {
 
 .social-icon {
     text-decoration: none;
-    color: var(--color-secundari);
+    color: #808080;
     transition: color 0.3s ease;
 }
 
