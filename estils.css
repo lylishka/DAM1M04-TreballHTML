@@ -19,7 +19,7 @@
 body {
     background-color: var(--fons);
     color: var(--color-primari);
-    padding: 20px 10px;
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
@@ -43,19 +43,16 @@ body {
 /* Menu */
 .topnav {
     position: sticky;
-    top: 10px;
+    top: 0;
     z-index: 1000;
     width: 100%;
-    margin: 0 auto;
     height: 100px; 
     padding: 0 40px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(var(--color-primari-rgb), 0.92); 
-    backdrop-filter: blur(12px);
-    border: 2px solid var(--color-secundari);
-    border-radius: 20px;
+    background: rgba(var(--color-primari-rgb), 0.7); 
+    backdrop-filter: blur(10px);
     box-shadow: 0 10px 40px var(--sombra-fosca);
     box-sizing: border-box;
 }
@@ -117,8 +114,8 @@ body {
 footer {
     background-color: var(--color-primari);
     color: var(--blanc-os);
-    padding: 30px 20px;
-    margin-top: auto;
+    padding: 20px 20px 40px 20px;
+    margin-top: 0;
     border-top: 2px solid var(--color-secundari);
     width: 100%;
     box-sizing: border-box;
@@ -139,7 +136,7 @@ footer {
 
 .social-icon {
     text-decoration: none;
-    color: #808080;
+    color: var(--color-secundari);
     transition: color 0.3s ease;
 }
 
@@ -158,6 +155,131 @@ footer {
 
 
 /* ESTILS PER INDEX.HTML */
+.hero {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 20px;
+    padding-bottom: 40px;
+    height: 60vh;
+    margin-top: -90px;
+    text-align: center;
+    background: center / cover url("assets/img/portada_7_wonders_duel.jpg");
+}
+
+.hero h1 {
+    font-size: 70px;
+    color: var(--color-secundari);
+    text-shadow: 2px 2px 8px var(--color-primari);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 22px;
+    color: var(--blanc-os);
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.aventura {
+    padding: 100px 10%;
+    position: relative;
+}
+
+.center { 
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.era-bloc {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.era-contingut {
+    flex: 1;
+}
+
+.era-contingut h2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.era-contingut h2 span {
+    margin: 0;
+    color: var(--color-secundari);
+    font-size: 2.5rem;
+}
+
+.era-icon {
+    font-size: 160px;
+    color: var(--color-secundari);
+    opacity: 0.15;
+}
+
+.contenedor-como-jugar {
+    padding: 80px 10% 40px 10%;
+    background-color: var(--color-primari);
+    color: white;
+    text-align: center;
+}
+
+.mecanicas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.mecanica-tarjeta {
+    flex: 1;
+    padding: 40px 20px;
+    border: 1px solid var(--color-secundari);
+    background: rgba(255, 252, 245, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mecanica-tarjeta span {
+    font-size: 50px;
+    color: var(--color-secundari);
+    margin-bottom: 15px;
+}
+
+.instrucciones-contenedor {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+.boto-instruccions {
+    display: inline-block;
+    padding: 20px 60px;
+    background-color: var(--color-secundari);
+    color: var(--color-primari);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--color-secundari);
+    transition: all 0.3s ease;
+}
+
+.boto-instruccions:hover {
+    background-color: var(--color-secundari-clar);
+    border-color: var(--color-secundari-clar);
+    box-shadow: 0 0 20px var(--sombra-or);
+}
+
+
 
 /* ESTILS PER INSTRUCCIONS.HTML */
 
@@ -176,8 +298,11 @@ footer {
     .topnav {
         height: 70px;
         padding: 0 20px;
-        top: 5px;
-        border-radius: 12px;
+        top: 0;
+    }
+
+    .menu {
+        top: 70px;
     }
 
     .logo img {
@@ -222,7 +347,7 @@ footer {
 
     /* Footer */
     footer {
-        padding: 20px 25px;
+        padding: 30px 25px;
     }
 
     .footer-contingut {
@@ -243,6 +368,59 @@ footer {
 
 
     /* ESTILS PER INDEX.HTML */
+    .hero {
+        background-size: 280%;
+        background-position: 45% 50%;
+        height: 60vh;
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        letter-spacing: 1.1;
+    }
+
+    .hero p {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .aventura {
+        padding: 50px 5%;
+    }
+
+    .era-bloc {
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 20px;
+        padding-bottom: 40px;
+    }
+
+    .era-contingut h2 {
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .mecanicas {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mecanica-tarjeta {
+        width: 85%;
+    }
+
+    .instrucciones-contenedor {
+        max-width: 100%;
+    }
+
+    .boto-instruccions {
+        width: 65%;
+        padding: 15px 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
 
     /* ESTILS PER INSTRUCCIONS.HTML */
 
