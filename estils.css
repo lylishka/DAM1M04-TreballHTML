@@ -282,6 +282,18 @@ footer {
 
 
 /* ESTILS PER INSTRUCCIONS.HTML */
+.datos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    margin: 0 auto;
+}
+.datos p {
+    padding: 15px;
+    border: 1px solid var(--color-secundari);
+    text-align: center;
+}
 
 /* ESTILS PER HISTORIA.HTML */
 
