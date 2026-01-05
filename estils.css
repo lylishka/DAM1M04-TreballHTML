@@ -32,6 +32,11 @@ body {
     font-style: normal;
 }
 
+.titulos-dorado {
+    color: var(--color-secundari);
+    font-size: 1.9em;
+}
+
 
 
 /* Material Icons */
@@ -184,8 +189,10 @@ footer {
 }
 
 .aventura {
-    padding: 100px 10%;
+    padding: 80px 20px;
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .center { 
@@ -195,27 +202,50 @@ footer {
 
 .era-bloc {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
+    padding-left: 40px;
 }
 
 .era-contingut {
-    flex: 1;
+    width: 50%;
 }
 
 .era-contingut h2 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+   margin-top: 0;
+   font-size: 1.7rem;
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.era-contingut p {
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 0.95rem;
+    margin-top: 15px;
 }
 
 .era-contingut h2 span {
     margin: 0;
     color: var(--color-secundari);
     font-size: 2.5rem;
+}
+
+.era-imatge {
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.era-imatge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
 }
 
 .era-icon {
@@ -228,6 +258,132 @@ footer {
     padding: 80px 10% 40px 10%;
     background-color: var(--color-primari);
     color: white;
+    text-align: center;
+}
+
+.introduccio-joc {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+}
+
+.detalls-joc {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+
+.imatge-detalls {
+    flex: 1;
+}
+
+.imatge-detalls img {
+    width: 100%;
+    height: auto;
+}
+
+.contingut-detalls {
+    flex: 1.5;
+}
+
+.llista-caracteristiques {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+.llista-caracteristiques li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    line-height: 1.5;
+}
+
+.instrucciones-contenedor {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.boto-instruccions {
+    display: inline-block;
+    padding: 20px 60px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    background-color: var(--color-secundari);
+    color: var(--color-primari);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--color-secundari);
+    transition: all 0.3s ease;
+}
+
+.boto-instruccions:hover {
+    background-color: var(--color-secundari-clar);
+    border-color: var(--color-secundari-clar);
+    box-shadow: 0 0 20px var(--sombra-or);
+}
+
+.linea-tiempo {
+    position: absolute;
+    left: -10px;
+    top: 215px;
+    width: 2px;
+    background-color: var(--color-secundari);
+    z-index: -1;
+    height: 10px;
+    box-shadow: 0 0 8px var(--sombra-or);    
+}
+
+.linea-tiempo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-secundari);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--color-secundari);
+}
+
+@keyframes aumentarAltura {
+    from {
+        height: 10px;
+    }
+
+    to {
+        height: calc(100% - 600px);
+    }
+}
+
+@supports (animation-timeline: view()) {
+    .linea-tiempo {
+        animation: aumentarAltura linear both;
+        animation-timeline: view();
+        animation-range: entry 15% cover 65%;
+    }
+}
+
+@supports not (animation-timeline: view()) {
+    .linea-tiempo {
+        height: 75%;
+    }
+}
+
+/* ESTILS PER INSTRUCCIONS.HTML */
+.datos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    margin: 0 auto;
+}
+.datos p {
+    padding: 15px;
+    border: 1px solid var(--color-secundari);
     text-align: center;
 }
 
@@ -252,47 +408,6 @@ footer {
     font-size: 50px;
     color: var(--color-secundari);
     margin-bottom: 15px;
-}
-
-.instrucciones-contenedor {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-    margin-top: 30px;
-}
-
-.boto-instruccions {
-    display: inline-block;
-    padding: 20px 60px;
-    background-color: var(--color-secundari);
-    color: var(--color-primari);
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: 2px solid var(--color-secundari);
-    transition: all 0.3s ease;
-}
-
-.boto-instruccions:hover {
-    background-color: var(--color-secundari-clar);
-    border-color: var(--color-secundari-clar);
-    box-shadow: 0 0 20px var(--sombra-or);
-}
-
-
-
-/* ESTILS PER INSTRUCCIONS.HTML */
-.datos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
-    margin: 0 auto;
-}
-.datos p {
-    padding: 15px;
-    border: 1px solid var(--color-secundari);
-    text-align: center;
 }
 
 /* ESTILS PER HISTORIA.HTML */
@@ -569,15 +684,6 @@ iframe {
         flex-wrap: wrap;
     }
 
-    .mecanicas {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .mecanica-tarjeta {
-        width: 85%;
-    }
-
     .instrucciones-contenedor {
         max-width: 100%;
     }
@@ -591,6 +697,16 @@ iframe {
 
 
     /* ESTILS PER INSTRUCCIONS.HTML */
+        .mecanicas {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mecanica-tarjeta {
+        width: 85%;
+    }
+
+
 
     /* ESTILS PER HISTORIA.HTML */
 
