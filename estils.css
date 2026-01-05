@@ -297,6 +297,7 @@ footer {
     margin-bottom: 10px;
     padding-left: 5px;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .instrucciones-contenedor {
@@ -652,36 +653,75 @@ iframe {
 
     /* ESTILS PER INDEX.HTML */
     .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
         background-size: 280%;
         background-position: 45% 50%;
         height: 60vh;
-        padding-top: 120px;
+        padding-top: 80px;
     }
 
     .hero h1 {
-        font-size: 45px;
-        letter-spacing: 1.1;
+        padding-top: 260px;
+        font-size: 32px;
     }
 
     .hero p {
         font-size: 18px;
+        margin-bottom: -15px;
         padding: 0 10px;
     }
 
+    .hero .intrucciones-contenedor {
+        width: 70%;
+    }
+
     .aventura {
-        padding: 50px 5%;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -30px;
     }
 
     .era-bloc {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
-        margin-left: 20px;
-        padding-bottom: 40px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .era-contingut {
+        width: 100%;
+        padding: 0 10px;
     }
 
     .era-contingut h2 {
-        font-size: 1.5rem;
-        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.4rem;
+    }
+
+    .era-contingut p {
+        text-align: center;
+    }
+
+    .era-imatge {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+
+    .linea-tiempo {
+        display: none;
+    }
+
+    .detalls-joc {
+        flex-direction: column;
+        gap: 30px;
     }
 
     .instrucciones-contenedor {
@@ -697,7 +737,7 @@ iframe {
 
 
     /* ESTILS PER INSTRUCCIONS.HTML */
-        .mecanicas {
+    .mecanicas {
         flex-direction: column;
         gap: 20px;
     }
