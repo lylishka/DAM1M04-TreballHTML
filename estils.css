@@ -116,6 +116,11 @@ body {
 }
 
 /* Footer */
+.extra {
+    background-color: var(--color-primari);
+    height: 20px;
+}
+
 footer {
     background-color: var(--color-primari);
     color: var(--blanc-os);
@@ -287,7 +292,7 @@ footer {
 .columna-animacio dotlottie-player {
     width: 350px;
     height: 350px;
-    margin-top: -150px;
+    margin-top: -100px;
 }
 
 
