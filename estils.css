@@ -339,7 +339,7 @@ footer {
 .linea-tiempo::after {
     content: '';
     position: absolute;
-    bottom: -4px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     width: 10px;
@@ -355,7 +355,7 @@ footer {
     }
 
     to {
-        height: calc(100% - 600px);
+        height: calc(100% - 690px);
     }
 }
 
@@ -363,7 +363,7 @@ footer {
     .linea-tiempo {
         animation: aumentarAltura linear both;
         animation-timeline: view();
-        animation-range: entry 15% cover 65%;
+        animation-range: entry 10% cover 55%;
     }
 }
 
