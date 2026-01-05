@@ -26,7 +26,68 @@
                 <li><a href="nosaltres.html"><span class="material-symbols-outlined">groups</span>About Us</a></li>
             </ul>
         </nav>
-            CONTENIDO DE LA PÁGINA
+            <h2 class="titulos-cinzel">Formulario de contacto</h2>
+
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1368.8234276887529!2d2.078835161031859!3d41.35164824196752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499bbdb89274f%3A0x99ad447b45703bbc!2sPARMOVIL%20Cornell%C3%A1!5e1!3m2!1ses-419!2ses!4v1767484425798!5m2!1ses-419!2ses"
+                width="600" 
+                height="450"
+                style="border:0;"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <form class="formulari" novalidate>
+
+                <div class="camp">
+                    <label for="nom">Nom</label>
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        placeholder=" "
+                        pattern="[A-Za-zÀ-ÿ\s]{3,20}"
+                        required>
+                    <div class="error">El nom ha de tenir entre 3 i 20 lletres</div>
+                </div>
+
+                <div class="camp">
+                    <label for="telefon">Telèfon</label>
+                    <input
+                        type="tel"
+                        id="telefon"
+                        name="telefon"
+                        placeholder=" "
+                        pattern="\+?[0-9]{9,13}"
+                        required>
+                    <div class="error">Introdueix un telèfon vàlid</div>
+                </div>
+
+                <div class="camp">
+                    <label for="email">Correu electrònic</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder=" "
+                        required>
+                    <div class="error">Introdueix un correu vàlid</div>
+                </div>
+
+                <div class="camp">
+                    <label for="missatge">Petició</label>
+                    <textarea
+                        id="missatge"
+                        name="missatge"
+                        placeholder=" "
+                        pattern=".{10,}"
+                        required></textarea>
+                    <div class="error">Mínim 10 caràcters</div>
+                </div>
+
+                <input type="submit" value="Enviar petició">
+            </form>
         <footer>
             <div class="footer-contingut">
                 <div class="social-links">
