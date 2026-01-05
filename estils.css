@@ -119,7 +119,7 @@ body {
 footer {
     background-color: var(--color-primari);
     color: var(--blanc-os);
-    padding: 20px 20px 40px 20px;
+    padding: 30px 40px;
     margin-top: 0;
     border-top: 2px solid var(--color-secundari);
     width: 100%;
@@ -136,17 +136,18 @@ footer {
 
 .social-links {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .social-icon {
     text-decoration: none;
     color: var(--color-secundari);
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .social-icon:hover {
     color: var(--color-secundari-clar);
+    transform: translateY(-3px);
 }
 
 .copyright {
@@ -275,6 +276,20 @@ footer {
     margin: 40px auto 0 auto;
     text-align: left;
 }
+
+.columna-animacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.columna-animacio dotlottie-player {
+    width: 350px;
+    height: 350px;
+    margin-top: -150px;
+}
+
 
 .imatge-detalls {
     flex: 1;
@@ -605,8 +620,8 @@ iframe {
         gap: 0;
         position: absolute;
         top: 80px;
-        left: 0;
-        width: 100%;
+        left: 10%;
+        width: 80%;
         background-color: rgba(var(--color-primari-rgb), 0.98);
         border-radius: 15px;
         max-height: 0;
@@ -666,6 +681,7 @@ iframe {
 
     .hero h1 {
         padding-top: 260px;
+        padding-left: 10px;
         font-size: 32px;
     }
 
@@ -684,7 +700,7 @@ iframe {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: -30px;
+        margin-left: -15px;
     }
 
     .era-bloc {
@@ -716,12 +732,24 @@ iframe {
     }
 
     .linea-tiempo {
-        display: none;
+        left: 40px;
+        top: 180px;
+        height: 0px;
+        width: 4px;
+        position: absolute;
     }
+
+
 
     .detalls-joc {
         flex-direction: column;
         gap: 30px;
+    }
+
+    .columna-animacio dotlottie-player {
+        width: 250px;
+        height: 250px;
+        margin-top: -150px;
     }
 
     .instrucciones-contenedor {
