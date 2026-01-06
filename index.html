@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="estils.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
         <title>7 Wonders Duel</title>
     </head>
     <body>
@@ -27,86 +27,56 @@
                 <li><a href="nosaltres.html"><span class="material-symbols-outlined">groups</span>About Us</a></li>
             </ul>
         </nav>
-        <div class="hero">
+        <header class="hero">
             <h1 class="titulos-cinzel">7 Wonders Duel</h1>
-            <p>Construeix la teva civilització. Supera el teu rival. Domina el món antic.</p>
-            <div class="intrucciones-contenedor">
-                <a href="#eres" class="boto-instruccions titulos-cinzel">Explora les Eres</a>
-            </div>
-        </div>
-        <div class="aventura" id="eres">
-            <h1 class="titulos-cinzel center">L'Evolució de les Eres</h1>
-            <div class="linea-tiempo"></div>
-            <div class="era-bloc">
-                <div class="era-contingut">
-                    <h2 class="titulos-cinzel"><span class="material-symbols-outlined">foundation</span> Era I </h2>
-                    <p>Tot comença amb una sola pedra. En aquesta etapa inicial, la teva prioritat és establir les bases de la teva civilitazació mitjançant la recol·lecció de matèries primeres essencials com la fusta, la pedra i l'argila. És el momento de tracar les primeres rutes comercials i assegurar els recursos que permetran, en un futur, aixecar estructures que desafiaran el pas del temps. Les decisions que prenguis ara determinaran la teva prosperitat ecòmica per a la resta de la partida.</p>
-                </div>
-                <div class="era-imatge">
-                    <img src="assets/img/Era_I.jpg" alt="Era I">
-                </div>
-            </div>
-            <div class="era-bloc">
-                <div class="era-contingut">
-                    <h2 class="titulos-cinzel"><span class="material-symbols-outlined">account_balance</span> Era II</h2>
-                    <p>La teva ciutat ja és una potència al món antic, i les necessitats evolucionen. L'interès es desplaça cap al desenvolupament científic i el reforça de les fronteres militars. És una època de gran tensió estratègica on el progrés cultural ha de conviure amb l'amenaça constant del teu reival. Hauràs de gestionar recursos processats com el vidre i el papir per accedir a edifics més complexos i assegurar que la teva inflència s'estengui per tot el Mediterrani.</p>
-                </div>
-                <div class="era-imatge">
-                    <img src="assets/img/Era_II.jpg" alt="Era II">
-                </div>
-            </div>
-            <div class="era-bloc">
-                <div class="era-contingut">
-                    <h2 class="titulos-cinzel"><span class="material-symbols-outlined">auto_awesome</span> Era III</h2>
-                    <p>Arribem al zenit de la història. Les ciutats es transformen en metròpolis enlluernadores on els grans Gremis i les Meravelles arquitectòniques defineixen qui serà recordat per l'eternitat. EN aquesta fase final, cada carta triada busca la glòria absoluta i el reconeixement dels déus. És el moment decisiu per segellar el teu destí: triomfaràs mitjançant ka supremacia militar o el progrés científic o la victòria civil? El teu llegat està a punt de ser escrit.</p>
-                </div>
-                <div class="era-imatge">
-                    <img src="assets/img/Era_III.png" alt="Era III">
-                </div>
-            </div>
-        </div>
-        <div class="contenedor-como-jugar">
-            <h1 class="titulos-cinzel">Com es Juga?</h1>
-            <div class="introduccio-joc">
-                <h2 class="titulos-cinzel titulos-dorado">La civilització neix de la evolució</h2>
-                <p>Una partida de 7 Wonders Duel es juga en tres rondes anomenades Eres. En cada una d'elles hauràs de triar certes cartes amb efectes cada vegada més potents. Les cartes que triis seran determinants per a la teva estratègia general.</p>
-            </div>
+            <p>L'estratègia de tota una civilitazació en només 30 minitus. El duel definitiu per a dos jugadors.</p>
+            <a href="#com-es-juga" class="boto-daurat titulos-cinzel">Comença el teu Duel</a>
+        </header>
+        <section id="com-es-juga" class="contenedor-como-jugar">
             <div class="detalls-joc">
-                <div class="imatge-detalls">
+                <div class="bloc-visual">
                     <img src="assets/img/caja_7_wonders_duel.png" alt="Caja">
                 </div>
-                <div class="contingut-detalls">
-                    <h3 class="titulos-cinzel titulos-dorado">7 Wonders Duel també és:</h3>
+                <div class="bloc-info">
+                    <div class="evolucio-icon">
+                        <span class="material-symbols-outlined icon-constructor">home</span>
+                        <h2 class="titulos-cinzel">Com es Juga?</h2>
+                    </div>
+                    <p>En aquest duel d'estratègia, cada jugador es converteix en el líder d'una civilització que haurà de créixer al llarg de tres Eres.</p>
                     <ul class="llista-caracteristiques">
-                        <li>Un joc dissenyat per a jugar dos jugadors.</li>
-                        <li>Un infinitat de formes d'interactuar i de posar en marxa diferents estratègies per a que cada una de les partides segueixi emocionant de principi a fi.</li>
-                        <li>Una creació dels millors dissenyadors contemporanis (Antoine Bauza i Bruno Cathala) ambientada en l'univers del joc més premiat del món.</li>
-                        <li>Una col·lecció de noves il·lustracions que enriqueixen i complementen l'univers de 7 Wonders.</li>
-                        <li>Un joc bàsic amb dues extensions: Pantheon i Agora, que faran que les partides segueixin més intenses i estratègiques.</li>
+                        <li><span class="material-symbols-outlined">history_edu</span>Tres Eres: Progresa a través del temps escollint cartes del taulell compartit.</li>
+                        <li><span class="material-symbols-outlined">architecture</span> Evolució: Construeix estructures comercials, militars i científiques per millorar la teva ciutat.</li>
                     </ul>
+                    <a href="instruccions.html" class="enllac-instruccions titulos-cinzel">Llegir Instruccions</a>
                 </div>
             </div>
-            <div class="intrucciones-contenedor">
-                <a href="instruccions.html" class="boto-instruccions titulos-cinzel">Llegir Instruccions</a>
+            <div class="lottie-contenedor">
+                <div id="lottie-animacio"></div>
             </div>
-            <div class="columna-animacio">
-                <dotlottie-player src="assets/media/swords.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
-            </div>
-        </div>
-        <div class="extra"></div>
+            <script>
+                lottie.loadAnimation({
+                    container: document.getElementById('lottie-animacio'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'assets/media/swords.json'
+                });
+            </script>
+        </section>
         <footer>
+            <div class="extra"></div>
             <div class="footer-contingut">
                 <div class="social-links">
-                    <a href="https://x.com/" target="_blank" class="social-icon">
+                    <a href="#" target="_blank" class="social-icon">
                         <span class="material-symbols-outlined">close</span>
                     </a>
-                    <a href="https://instagram.com/" target="_blank" class="social-icon">
+                    <a href="#" target="_blank" class="social-icon">
                         <span class="material-symbols-outlined">photo_camera</span>
                     </a>
-                    <a href="https://facebook.com/" target="_blank" class="social-icon">
+                    <a href="#" target="_blank" class="social-icon">
                         <span class="material-symbols-outlined">facebook</span>
                     </a>
-                    <a href="https://tiktok.com/" target="_blank" class="social-icon">
+                    <a href="#" target="_blank" class="social-icon">
                         <span class="material-symbols-outlined">music_note</span>
                     </a>
                 </div>
