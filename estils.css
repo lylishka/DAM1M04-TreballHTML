@@ -9,7 +9,6 @@
   /* Fons i Detalls */
   --fons: #e8e4d8;
   --blanc-os: #fffcf5;
-  --acent: #27ae60;
 
   /* Sombres i Bores */
   --sombra-or: rgba(212, 175, 55, 0.3);
@@ -30,16 +29,6 @@ body {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-}
-
-.titulos-dorado {
-  color: var(--color-secundari);
-  font-size: 1.9em;
-}
-
-.center {
-  text-align: center;
-  margin-bottom: 60px;
 }
 
 /* Material Icons */
@@ -118,19 +107,11 @@ body {
 }
 
 /* Footer */
-.extra {
-  background-color: var(--color-primari);
-  height: 20px;
-}
-
 footer {
   background-color: var(--color-primari);
   color: var(--blanc-os);
   padding: 30px 40px;
-  margin-top: 0;
-  border-top: 2px solid var(--color-secundari);
-  width: 100%;
-  box-sizing: border-box;
+  text-align: right;
 }
 
 .footer-contingut {
@@ -139,22 +120,23 @@ footer {
   align-items: flex-end;
   gap: 10px;
   width: 100%;
+  border-top: 2px solid var(--color-secundari);
 }
 
 .social-links {
+  margin-top: 15px;
   display: flex;
   gap: 20px;
 }
 
 .social-icon {
-  text-decoration: none;
   color: var(--color-secundari);
   transition: all 0.3s ease;
 }
 
 .social-icon:hover {
   color: var(--color-secundari-clar);
-  transform: translateY(-3px);
+  transform: scale(1.1);
 }
 
 .copyright {
@@ -165,7 +147,7 @@ footer {
   text-align: right;
 }
 
-/* ESTILS PER INDEX.HTML */
+/* ESTILS PER INDEX.HTML */ 
 .hero {
   display: flex;
   justify-content: center;
@@ -306,45 +288,6 @@ footer {
   display: block;
 }
 
-.evolucio-icon {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 40px;
-}
-
-.icon-constructor {
-  font-size: 2.8rem;
-  color: #888;
-  display: block;
-}
-
-@keyframes evolucionar-icon {
-  0% {
-    transform: scale(1);
-    color: #888;
-  }
-
-  50% {
-    transform: scale(1.3);
-    color: var(--color-secundari);
-  }
-
-  100% {
-    transform: scale(1.6);
-    color: var(--color-secundari);
-  }
-}
-
-@supports (animation-timeline: view()) {
-  .icon-constructor {
-    animation: evolucionar-icon linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 40%;
-  }
-}
-
 /* ESTILS PER INSTRUCCIONS.HTML */
 .datos {
   display: flex;
@@ -384,16 +327,16 @@ footer {
 
 /* ESTILS PER HISTORIA.HTML */
 .contenedor-historia {
-  padding-top: 50px;
+  padding-bottom: 120px;
 }
 
 .carrusel-contenedor {
   position: relative;
-  max-width: 400px;
+  max-width: 390px;
   height: 600px;
   margin: 30px auto;
   overflow: hidden;
-  border: 3px solid var(--color-secundari);
+  border: 4px solid var(--color-secundari);
   border-radius: 15px;
   box-shadow: 0 15px 35px var(--sombra-fosca);
   background-color: var(--color-primari);
@@ -428,6 +371,7 @@ footer {
   right: 0;
   height: 90px;
   background: var(--color-primari);
+  border-top: 4px solid var(--color-secundari);
   color: var(--blanc-os);
   padding: 20px;
   text-align: center;
@@ -484,19 +428,12 @@ footer {
   transform: scale(1.3);
 }
 
-.aventura {
-  padding: 80px 20px;
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .era-bloc {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 80px;
-  margin-bottom: 120px;
+  margin-bottom: 30px;
   padding-left: 40px;
 }
 
@@ -545,6 +482,56 @@ footer {
   opacity: 0.15;
 }
 
+/* ESTILS PER CLASE AVENTURA PER INSTRUCCIONS.HTML, HISTORIA.HTML I CONTACTE.HTML */
+.aventura {
+  padding: 80px 20px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ESTILS PER TITULOS CENTRATS PER INDEX.HTML, INSTRUCCIONS.HTML, HISTORIA.HTML I CONTACTE.HTML */
+.aventura h1,
+.contenedor-historia h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* ESTILS PER ANIMACIO-SCROLL DE INDEX.HTML I HISTORIA.HTML */
+
+/* Per INDEX.HTML */
+.evolucio-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.icon-constructor {
+  font-size: 2.8rem;
+  color: #888;
+  display: block;
+}
+
+@keyframes evolucionar-icon {
+  0% {
+    transform: scale(1);
+    color: #888;
+  }
+
+  50% {
+    transform: scale(1.3);
+    color: var(--color-secundari);
+  }
+
+  100% {
+    transform: scale(1.6);
+    color: var(--color-secundari);
+  }
+}
+
+/* Per HISTORIA.HTML */
 .linea-tiempo {
   position: absolute;
   left: -10px;
@@ -580,6 +567,14 @@ footer {
 }
 
 @supports (animation-timeline: view()) {
+  /* Per INDEX.HTML */
+  .icon-constructor {
+    animation: evolucionar-icon linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+  }
+
+  /* Per HISTORIA.HTML */
   .linea-tiempo {
     animation: aumentarAltura linear both;
     animation-timeline: view();
@@ -588,6 +583,13 @@ footer {
 }
 
 @supports not (animation-timeline: view()) {
+  /* Per INDEX.HTML */
+  .icon-constructor {
+    color: var(--color-secundari);
+    transform: scale(1.6);
+  }
+
+  /* Per HISTORIA.HTML */
   .linea-tiempo {
     height: 75%;
   }
@@ -815,6 +817,33 @@ iframe {
   }
 
   /* ESTILS PER HISTORIA.HTML */
+  .carrusel-contenedor {
+    max-width: 280px;
+    height: 520px;
+    margin: 20px auto;
+  }
+
+  .slide-item img {
+    height: 520px;
+    object-fit: cover;
+  }
+
+  .slide-text {
+    padding: 15px 10px 35px;
+    height: auto;
+    font-size: 0.85rem;
+  }
+
+  .controles-carrusel {
+    bottom: 10px;
+    gap: 10px;
+  }
+
+  .control-carrusel {
+    width: 10px;
+    height: 10px;
+  }
+
   .aventura {
     padding: 40px 20px;
     display: flex;
