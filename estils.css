@@ -303,26 +303,46 @@ footer {
 }
 
 .mecanicas {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 50px 0;
 }
 
 .mecanica-tarjeta {
-  flex: 1;
-  padding: 40px 20px;
-  border: 1px solid var(--color-secundari);
-  background: rgba(255, 252, 245, 0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex: 1;
+    padding: 40px 20px;
+    border: 1px solid var(--color-secundari);
+    background: rgba(255, 252, 245, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mecanica-tarjeta .info {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mecanica-tarjeta:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px var(--sombra-fosca);
+    background: rgba(255, 255, 245, 0.15);
+}
+
+.mecanica-tarjeta:hover .info {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .mecanica-tarjeta span {
-  font-size: 50px;
-  color: var(--color-secundari);
-  margin-bottom: 15px;
+    font-size: 50px;
+    color: var(--color-secundari);
+    margin-bottom: 15px;
 }
 
 /* ESTILS PER HISTORIA.HTML */
