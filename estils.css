@@ -196,7 +196,7 @@ footer {
 
 .contenedor-como-jugar {
   padding: 100px 20px;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -249,7 +249,7 @@ footer {
 
 .llista-caracteristiques li {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   margin-bottom: 25px;
 }
 
