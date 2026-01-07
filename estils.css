@@ -402,6 +402,53 @@ footer {
     margin-bottom: 15px;
 }
 
+section {
+    max-width: 1200px; 
+    margin: 0 auto 120px auto;
+    padding: 0 40px;
+}
+/* LISTAS DE INSTRUCCIONES */
+.llista-caracteristiques {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.llista-caracteristiques li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.stack {
+    position: relative;
+    width: 260px;
+    height: 380px;
+    margin-right: 60px;
+}
+
+.eras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.5s ease;
+}
+
+.tercera-era {
+    transform: translate(0, 40px) scale(0.85);
+    z-index: 1;
+}
+
+.segunda-era {
+    transform: translate(0, 20px) scale(0.92);
+    z-index: 2;
+}
+
+.primera-era {
+    transform: translate(0, 0) scale(1);
+    z-index: 3;
+}
+
 /* ESTILS PER HISTORIA.HTML */
 .contenedor-historia {
   padding-top: 50px;
